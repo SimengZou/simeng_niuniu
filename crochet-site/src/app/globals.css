@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fff7fb;
+  --foreground: #0f172a;
 }
 
 @theme inline {
@@ -12,15 +12,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
+  /* Light-only, cheerful background */
+  background: radial-gradient(1200px 800px at 10% 10%, rgba(236, 72, 153, 0.14), transparent 60%),
+    radial-gradient(1100px 700px at 90% 20%, rgba(59, 130, 246, 0.14), transparent 55%),
+    radial-gradient(900px 700px at 60% 90%, rgba(34, 197, 94, 0.12), transparent 55%),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
 }
@@ -30,34 +27,24 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: rgba(236, 72, 153, 0.22);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: rgba(15, 23, 42, 0.06);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ec4899;
+  background: linear-gradient(180deg, #ec4899, #60a5fa, #34d399);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #db2777;
-}
-
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-track {
-    background: #1f1f1f;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #f43f5e;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #e11d48;
-  }
+  background: linear-gradient(180deg, #db2777, #3b82f6, #10b981);
 }
