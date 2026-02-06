@@ -1,40 +1,86 @@
-// Sample crochet projects data - you can replace these with your actual projects
+import Image from "next/image";
+
+// Gallery data (images live in `public/projects/`)
 const crochetProjects = [
   {
     id: 1,
-    title: "Cross Body Bag",
-    description: "A warm and soft bag perfect for everyday use",
-    category: "Fashion",
+    title: "Collar",
+    description: "A cute statement collar to elevate an outfit.",
+    category: "Accessories",
+    imageSrc: "/projects/Collar.JPG",
+    imageAlt: "Crochet collar",
   },
   {
     id: 2,
-    title: "Food Platter",
-    description: "Sorted food platter for your next party",
-    category: "Toys",
+    title: "Duck",
+    description: "A cheerful duck friend made with soft yarn.",
+    category: "Amigurumi",
+    imageSrc: "/projects/Duck.jpg",
+    imageAlt: "Crochet duck",
   },
   {
     id: 3,
-    title: "Granny Square Bag",
-    description: "A colorful and stylish tote bag",
-    category: "Accessories",
+    title: "Girl with a Pearl Earring",
+    description: "A crochet art piece inspired by a classic painting.",
+    category: "Art",
+    imageSrc: "/projects/Girl_with_Pearl_Earring.jpg",
+    imageAlt: "Crochet girl with a pearl earring",
   },
   {
     id: 4,
-    title: "Baby Booties",
-    description: "Sweet little booties for tiny feet",
-    category: "Baby Items",
+    title: "Mosaic Your Pet",
+    description: "A mosaic-style crochet portrait—perfect for pet lovers.",
+    category: "Custom",
+    imageSrc: "/projects/Mosaic_Your_Pet.png",
+    imageAlt: "Crochet mosaic pet portrait",
   },
   {
     id: 5,
-    title: "Floral Coasters",
-    description: "Beautiful decorative coasters for your home",
-    category: "Home Decor",
+    title: "Pear Ya",
+    description: "A playful pear character with lots of personality.",
+    category: "Amigurumi",
+    imageSrc: "/projects/Pear_Ya.jpg",
+    imageAlt: "Crochet pear character",
   },
   {
     id: 6,
-    title: "Scarf Set",
-    description: "Crossiant Scarf",
-    category: "Accessories",
+    title: "Penguin",
+    description: "A tiny penguin buddy—great as a gift.",
+    category: "Amigurumi",
+    imageSrc: "/projects/Penguin.JPG",
+    imageAlt: "Crochet penguin",
+  },
+  {
+    id: 7,
+    title: "Market Veggie",
+    description: "Cute veggie friends for play or decoration.",
+    category: "Amigurumi",
+    imageSrc: "/projects/Market_Veggie.JPG",
+    imageAlt: "Crochet vegetables",
+  },
+  {
+    id: 8,
+    title: "Coaster",
+    description: "Bright coasters to add color to your table.",
+    category: "Home Decor",
+    imageSrc: "/projects/Coaster.jpg",
+    imageAlt: "Crochet coaster",
+  },
+  {
+    id: 9,
+    title: "Matilda",
+    description: "A character doll with a sweet, handmade charm.",
+    category: "Dolls",
+    imageSrc: "/projects/Matilda.jpg",
+    imageAlt: "Crochet Matilda doll",
+  },
+  {
+    id: 10,
+    title: "Rudoff",
+    description: "A festive reindeer friend for the holidays.",
+    category: "Amigurumi",
+    imageSrc: "/projects/Rudoff.png",
+    imageAlt: "Crochet reindeer (Rudoff)",
   },
 ];
 
@@ -123,10 +169,15 @@ export default function Home() {
                 className="group overflow-hidden rounded-2xl border border-white/60 bg-white/80 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 <div className="relative flex aspect-square items-center justify-center overflow-hidden bg-gradient-to-br from-fuchsia-100 via-sky-100 to-amber-100">
-                  {/* Placeholder for image - replace with actual images */}
-                  <div className="text-6xl opacity-30 group-hover:scale-110 transition-transform duration-300">
-                    🧶
-                  </div>
+                  <Image
+                    src={project.imageSrc}
+                    alt={project.imageAlt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    priority={project.id <= 3}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/35 via-transparent to-white/10" />
                   <div className="absolute top-4 right-4 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold text-white">
                     {project.category}
                   </div>
@@ -221,7 +272,7 @@ export default function Home() {
                   id="email"
                   name="email"
                   className="w-full rounded-lg border border-slate-200 bg-white/90 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-transparent focus:ring-2 focus:ring-fuchsia-400"
-                  placeholder="your.email@example.com"
+                  placeholder="gojiniupui.crochet@gmail.com"
                 />
               </div>
               <div>
@@ -251,7 +302,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span>📱</span>
-                  <span>+1 (555) 123-4567</span>
+                  <span>+64 21 0532 3146</span>
                 </div>
               </div>
             </div>
