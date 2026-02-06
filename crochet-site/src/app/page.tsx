@@ -321,14 +321,13 @@ export default function Home() {
               Handmade Crafts
             </p>
             <div className="flex justify-center space-x-6 mb-6">
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <a
+                href="https://www.instagram.com/goji_niupi_crochet/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+              >
                 Instagram
-              </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
-                Facebook
-              </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
-                Etsy
               </a>
             </div>
             <p className="text-white/70 text-sm">
