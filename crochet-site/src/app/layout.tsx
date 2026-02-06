@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Goji NiuPi | Handmade Crafts",
   description: "Beautiful handcrafted crochet items and patterns. Explore our collection of unique crochet creations.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({

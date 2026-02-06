@@ -298,7 +298,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-slate-700">
                 <div className="flex items-center gap-2">
                   <span>📧</span>
-                  <span>your.email@example.com</span>
+                  <span>gojiniupi.crochet@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span>📱</span>
