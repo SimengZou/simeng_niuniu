@@ -73,8 +73,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-              Handmade with
-              <span className="text-rose-600 dark:text-rose-400"> Love</span>
+              Handmade{" "}
+              <span className="text-rose-600 dark:text-rose-400">Crafts</span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
               Discover beautiful crochet creations, each piece crafted with care and attention to detail
